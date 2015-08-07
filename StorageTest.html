@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>データの記録</title>
+		<script>
+		localStorage.setItem("TEST1","楊");
+		alert("保存されているデータは「" + localStorage.getItem("TEST1") + "」です");
+			function REC(){
+				var DATA = document.FRM_A.FTXT.value;
+				localStorage.setItem("TEST",DATA);
+			}
+			function PLY(){
+				var PUL = localStorage.getItem("TEST");
+				alert("保存されているデータは「"+PUL+"」です");
+			}
+		</script>
+	</head>
+	<body>
+	<p>したの入力欄のテキストをlocal Storageに記録します</p>
+	<form name = "FRM_A" onsubmint = "return false">
+		<input type = "text" name = "FTXT">
+		<button onclick = "REC()">データの記録</button><br><br>
+		<p>記録されたデータを確認するには以下のボタンを押します</p>
+		<button onclick = "PLY()">データの確認</button>
+	</form>
+	</body>
+</html>
